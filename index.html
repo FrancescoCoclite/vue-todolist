@@ -18,7 +18,7 @@
             </header>
 
             <nav>
-                <input type="text" placeholder="Inserisci nuovo impegno" v-model='nuovoImpegno'>
+                <input type="text" placeholder="Inserisci nuovo impegno" @keyup.enter="addImpegno" v-model='nuovoImpegno'>
                 <button @click="addImpegno">Aggiungi</button>
             </nav>
         </div>
