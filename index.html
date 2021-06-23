@@ -26,11 +26,12 @@
         <div class="container">
             <section>
                 <ul>
-                    <li class="clearfix" v-for="elemento in impegni">
+                    <li class="clearfix" v-for="(elemento, index) in impegni">
                         {{elemento}}
-                        <i class="fas fa-times"></i>
+                        <i class="fas fa-times" @click="remove(index)"></i>
                     </li>
                 </ul>
+                <h2 v-if="(impegni == 0)">Nessun Impegno</h2>
             </section>
         </div>
         

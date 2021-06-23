@@ -12,7 +12,16 @@ var app = new Vue({
     },
     methods: {
         addImpegno(){
-            this.impegni.push(this.nuovoImpegno)
+            if (this.nuovoImpegno == ''){
+                alert('Devi prima inserire un impegno')
+            }else{
+                this.impegni.push(this.nuovoImpegno)
+                this.nuovoImpegno = '';
+            }
+        },
+        remove(index){
+            console.log(index);
+            this.impegni.splice(index,1)
         }
     }
 })
