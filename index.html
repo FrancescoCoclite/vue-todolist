@@ -18,16 +18,16 @@
             </header>
 
             <nav>
-                <input type="text" placeholder="Inserisci nuovo impegno">
-                <button>Aggiungi</button>
+                <input type="text" placeholder="Inserisci nuovo impegno" v-model='nuovoImpegno'>
+                <button @click="addImpegno">Aggiungi</button>
             </nav>
         </div>
 
         <div class="container">
             <section>
                 <ul>
-                    <li class="clearfix">
-                        Aggiungi nuovo impegno
+                    <li class="clearfix" v-for="elemento in impegni">
+                        {{elemento}}
                         <i class="fas fa-times"></i>
                     </li>
                 </ul>
